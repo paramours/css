@@ -6,7 +6,7 @@
   "type": "module",
   "module": "./dist/paramour.min.css",
   "bin": {
-    "paramour": "./cli.mjs"
+    "paramour": "cli.mjs"
   },
   "scripts": {
     "build": "node ./cli.mjs > ./dist/paramour.css",
