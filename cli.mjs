@@ -17,7 +17,7 @@ const configArg = getArg('config')
 const outputArg = getArg('output')
 const configPath = configArg
   ? join(cwd(), configArg)
-  : join(here, './config.json')
+  : join(here, './styleguide.mjs')
 
 let configBlob
 try {

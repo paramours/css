@@ -1,5 +1,5 @@
 import sheetHeader from './lib/sheet-header.mjs'
-import reset from './lib/reset.mjs'
+import resetStyles from './lib/reset.mjs'
 
 // Custom properties
 import borderRadius from './properties/border-radius.mjs'
@@ -54,20 +54,25 @@ import zIndex from './classes/basic/z-index.mjs'
 
 export default function write(config) {
   try {
-    const { breakpoints = {} } = config
+    const {
+      breakpoints = {},
+      classes = true,
+      reset = true,
+    } = config
 
     let output = sheetHeader() + '\n\n'
 
     // Allow optout of the CSS reset
-    if (config.reset) {
-      output += reset()
+    if (reset) {
+      output += resetStyles()
+      output += '\n'
     }
 
     // Run a CSS generator function only if its respective config field is truthy
     function conditionallyWrite(field, generator, breakpoint = '') {
       if (field !== false) {
-        output += generator({ config, breakpoint })
-        output += '\n\n'
+        const result = generator({ config, breakpoint })
+        output += result ? (result + '\n\n') : ''
       }
     }
 
@@ -115,17 +120,17 @@ export default function write(config) {
     }
 
     // Emit custom properties
-    conditionallyWrite(config.borders.radii, borderRadius)
-    conditionallyWrite(config.borders.widths, borderWidths)
-    conditionallyWrite(config.color.scales, colorScales)
-    conditionallyWrite(config.color.spots, colorSpots)
+    conditionallyWrite(config.borders?.radii, borderRadius)
+    conditionallyWrite(config.borders?.widths, borderWidths)
+    conditionallyWrite(config.color?.scales, colorScales)
+    conditionallyWrite(config.color?.spots, colorSpots)
     conditionallyWrite(config.customProperties, customProperties)
     conditionallyWrite(config.fonts, fonts)
     conditionallyWrite(config.spaceScale, spaceScale)
     conditionallyWrite(config.typeScale, typeScale)
 
     // Optionally emit classes
-    if (config.classes) {
+    if (classes) {
       // Write default classes
       writeClasses()
       // Write media query scoped classes for each entry in `config.breakpoints`
