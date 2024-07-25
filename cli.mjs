@@ -19,9 +19,10 @@ const configPath = configArg
   ? join(cwd(), configArg)
   : join(here, './styleguide.mjs')
 
-let configBlob
+let config = {}
 try {
-  configBlob = readFileSync(configPath, 'utf-8')
+  const { default: configObject } = await import(configPath)
+  config = configObject
 }
 catch (err) {
   stderr.write(`Error reading config file: ${configPath}\n`)
@@ -31,12 +32,12 @@ catch (err) {
 if (outputArg) {
   const outputPath = join(cwd(), outputArg)
   try {
-    writeFileSync(outputPath, styles(configBlob))
+    writeFileSync(outputPath, styles(config))
   }
   catch (err) {
     stderr.write(`Error writing to output file: ${outputPath}\n`)
     process.exit(1)
   }
 } else {
-  stdout.write(styles(configBlob))
+  stdout.write(styles(config))
 }

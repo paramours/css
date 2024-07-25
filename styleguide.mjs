@@ -8,9 +8,7 @@ export default {
     radii: [2, 4, 8, 9999],
     widths: [1, 2, 4],
   },
-  breakpoints: {
-    lg: '48em',
-  },
+  breakpoints: {},
   color: {
     scales: {
       gray: '#808080',
@@ -21,7 +19,7 @@ export default {
   fonts: {
     sans: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif',
     serif: 'Georgia, Cambria, Times New Roman, Times, serif',
-    mono: 'Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+    mono: 'Source Code Pro, Roboto Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
   },
   grid: {
     steps: 6,
