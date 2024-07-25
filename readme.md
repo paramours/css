@@ -36,7 +36,7 @@ npx paramour --output=./public/paramour.css
 To generate styles using [a custom configuration](#customization), use the `--config` parameter:
 
 ```shell
-npx paramour --config=./styleguide.js --output=./public/paramour.css
+npx paramour --config=./styleguide.mjs --output=./public/paramour.css
 ```
 
 The CLI can also be used more programmatically by including it as a script in your package manifest:
@@ -44,7 +44,7 @@ The CLI can also be used more programmatically by including it as a script in yo
 ```json
 {
   "scripts": {
-    "paramour": "paramour --config=./styleguide.js output=./public/paramour.css"
+    "paramour": "paramour --config=./styleguide.mjs output=./public/paramour.css"
   }
 }
 ```
@@ -72,7 +72,7 @@ paramour/arc-plugin-paramour-css
 # Enable the plugin
 @paramour-css
 # Optionally use a custom configuration file
-config ./styleguide.js
+config ./styleguide.mjs
 ```
 
 Finally, include the generated styles in your project’s `head.mjs` file:
