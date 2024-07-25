@@ -1,6 +1,6 @@
 {
   "name": "@paramour/css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parametric CSS for the modern age",
   "main": "index.mjs",
   "type": "module",
