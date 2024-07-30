@@ -11,7 +11,7 @@ export default function fontSize(state = {}) {
     output += '/*** Font Size ***/'
     sizes.forEach(size => {
       output += '\n'
-      output += `${size.replace('--text-', '.text')}${breakpoint} { font-size: var(${size}); }`
+      output += `${size.replace('--text', '.text')}${breakpoint} { font-size: var(${size}); }`
     })
   }
 

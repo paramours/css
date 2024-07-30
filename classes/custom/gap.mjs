@@ -11,7 +11,7 @@ export default function gap(state = {}) {
     output += '/*** Gap ***/'
     sizes.forEach(size => {
       output += '\n'
-      output += `.gap${size.replace('--space-', '')}${breakpoint} { gap: var(${size}); }`
+      output += `.gap${size.replace('--space', '')}${breakpoint} { gap: var(${size}); }`
     })
   }
   return output
