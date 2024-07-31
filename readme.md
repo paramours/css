@@ -12,6 +12,7 @@ Contents:
   - [Optional classes](#optional-classes)
   - [Prior art](#prior-art)
 - [Customization](#customization)
+- [Migrating from Enhance Styles](#migrating-from-enhance-styles)
 - [Further documentation](#further-documentation)
 
 ## Installation and usage
@@ -191,6 +192,10 @@ For the space and type scales, the following common ratios can be referenced by 
 ```
 
 If you’d like to visualize the output of these scales before you have content to test them with, we recommend tools such as [Tim Brown’s modularscale.com](https://www.modularscale.com/) to do so.
+
+## Migrating from Enhance Styles
+
+If you’re adopting Paramour for an app that currently uses [Enhance Styles](https://github.com/enhance-dev/enhance-styles) (Paramour’s predecessor), please refer to [our migration guide](https://github.com/paramours/css/wiki/Migrating-from-Enhance-Styles)
 
 ## Further documentation
 
