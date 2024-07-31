@@ -9,8 +9,8 @@ Contents:
   - [For Enhance](#for-enhance)
 - [Overview](#overview)
   - [What is parametric CSS?](#what-is-parametric-css)
-  - [Prior art](#prior-art)
   - [Optional classes](#optional-classes)
+  - [Prior art](#prior-art)
 - [Customization](#customization)
 - [Further documentation](#further-documentation)
 
@@ -115,12 +115,6 @@ In short, we define parametric CSS as follows:
 2. Parametric CSS generates discrete, single purpose units of style that are **composable** (single units can be combined to build complex designs), **complementary** (units implement one style and one style only, and thus do not interact or introduce side effects), and **constant** (the style a unit implements does not change unless the configuration is updated). These units of style can be in the form of classes, classes utilizing custom properties, or custom properties on their own.
 3. Parametric CSS serves as a base for **design systems and global styles**. While it can be used to apply those styles to discrete components, it is not intended to create bespoke styles local to specific components. Other CSS methodologies can be used in tandem for these design challenges, while relying on parametric CSS as a common baseline for performance, scalability, and versatility.
 
-### Prior art
-
-By referring to our approach as parametric CSS rather than by the name (or a modification of) an existing methodology, we’re not looking to disregard the important, category defining work of other authors, but rather to clarify and assert the principles behind our approach. 
-
-Our modelling of parametric CSS draws on the work of designers and developers such as [Tim Brown](https://tbrown.org/) (and his work on [modular type on the web](https://alistapart.com/article/more-meaningful-typography/)), [Adam Morse](https://mrmrs.cc/)  ([Tachyons](https://tachyons.io/), [Components AI](https://components.ai/)), [Brent Jackson](https://jxnblk.com/) ([Theme UI](https://theme-ui.com/)), and [James Gilyead](https://www.hustlersquad.net/) & [Trys Mudford](https://www.trysmudford.com/) ([Utopia](https://utopia.fyi/)), among others.
-
 ### Optional classes
 
 Out of the box, Paramour provides a wide base of parametric single purpose classes and custom properties that can be used as a global styling system. These classes and custom properties are derived from a fully configurable styleguide, making Paramour ideal for use with new and preexisting design systems and brand standards.
@@ -128,6 +122,14 @@ Out of the box, Paramour provides a wide base of parametric single purpose class
 For those who wish to construct their own CSS classes, Paramour can be configured to emit *only* custom properties, which can be used in your own application stylesheets. This allows authors to leverage its parametric configurability (and its automation of creating fluid scales, color palettes, etc) while utilizing whichever CSS methodologies they feel most comfortable with.
 
 For further guidance on working with Paramour, refer to [the docs](https://paramour.style)
+
+### Prior art
+
+By referring to our approach as parametric CSS rather than by the name (or a modification of) an existing methodology, we’re not looking to disregard the important, category defining work of other authors, but rather to clarify and assert the principles behind our approach. 
+
+Our modelling of parametric CSS draws on the work of designers and developers such as [Tim Brown](https://tbrown.org/) (and his work on [modular type on the web](https://alistapart.com/article/more-meaningful-typography/)), [Adam Morse](https://mrmrs.cc/)  ([Tachyons](https://tachyons.io/), [Components AI](https://components.ai/)), [Brent Jackson](https://jxnblk.com/) ([Theme UI](https://theme-ui.com/)), and [James Gilyead](https://www.hustlersquad.net/) & [Trys Mudford](https://www.trysmudford.com/) ([Utopia](https://utopia.fyi/)), among others.
+
+Paramour began its life as [Enhance Styles](https://github.com/enhance-dev/enhance-styles), a styling library for [Enhance](https://enhance.dev) apps.
 
 ## Customization
 
