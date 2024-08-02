@@ -264,36 +264,42 @@ dialog {
 .rows-end-auto { grid-row-end: auto; }
 .rows-none { grid-template-rows: none; }.col-1 { grid-template-columns:repeat(1, minmax(0, 1fr)); }
 .col-span-1 { grid-column: span 1 / span 1; }
+.row-span-1 { grid-row: span 1 / span 1; }
 .col-start-1 { grid-column-start: 1; }
 .row-start-1 { grid-row-start: 1; }
 .col-end-1 { grid-column-end: 1; }
 .row-end-1 { grid-row-end: 1; }
 .row-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }.col-2 { grid-template-columns:repeat(2, minmax(0, 1fr)); }
 .col-span-2 { grid-column: span 2 / span 2; }
+.row-span-2 { grid-row: span 2 / span 2; }
 .col-start-2 { grid-column-start: 2; }
 .row-start-2 { grid-row-start: 2; }
 .col-end-2 { grid-column-end: 2; }
 .row-end-2 { grid-row-end: 2; }
 .row-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }.col-3 { grid-template-columns:repeat(3, minmax(0, 1fr)); }
 .col-span-3 { grid-column: span 3 / span 3; }
+.row-span-3 { grid-row: span 3 / span 3; }
 .col-start-3 { grid-column-start: 3; }
 .row-start-3 { grid-row-start: 3; }
 .col-end-3 { grid-column-end: 3; }
 .row-end-3 { grid-row-end: 3; }
 .row-3 { grid-template-rows: repeat(3, minmax(0, 1fr)); }.col-4 { grid-template-columns:repeat(4, minmax(0, 1fr)); }
 .col-span-4 { grid-column: span 4 / span 4; }
+.row-span-4 { grid-row: span 4 / span 4; }
 .col-start-4 { grid-column-start: 4; }
 .row-start-4 { grid-row-start: 4; }
 .col-end-4 { grid-column-end: 4; }
 .row-end-4 { grid-row-end: 4; }
 .row-4 { grid-template-rows: repeat(4, minmax(0, 1fr)); }.col-5 { grid-template-columns:repeat(5, minmax(0, 1fr)); }
 .col-span-5 { grid-column: span 5 / span 5; }
+.row-span-5 { grid-row: span 5 / span 5; }
 .col-start-5 { grid-column-start: 5; }
 .row-start-5 { grid-row-start: 5; }
 .col-end-5 { grid-column-end: 5; }
 .row-end-5 { grid-row-end: 5; }
 .row-5 { grid-template-rows: repeat(5, minmax(0, 1fr)); }.col-6 { grid-template-columns:repeat(6, minmax(0, 1fr)); }
 .col-span-6 { grid-column: span 6 / span 6; }
+.row-span-6 { grid-row: span 6 / span 6; }
 .col-start-6 { grid-column-start: 6; }
 .row-start-6 { grid-row-start: 6; }
 .col-end-6 { grid-column-end: 6; }
