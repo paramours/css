@@ -3,13 +3,21 @@ import { generateTypeScaleProperties, defaultConfig } from '../lib/scales.mjs'
 export default function typeScaleProperties(state = {}) {
   const { config = {} } = state
   const { typeScale = defaultConfig } = config
-  const checkAccessibility = typeScale.checkAccessibility ?? true
+  const validateAccessibility = typeScale.validateAccessibility ?? true
 
-  if ( checkAccessibility && !validateTypeScaleAccessibility(typeScale) ) {
-    throw new Error('Your requested type scale fails the WCAG SC 1.4.4 accessibility rule. '
-      + "If you would like to proceed anyway, then set 'checkAccessibility' "
-      + 'to false in your typeScale config.'
-    )
+  if (!validateTypeScaleAccessibility(typeScale)) {
+    let message = 'Your requested type scale fails the WCAG SC 1.4.4 accessibility rule.';
+    if (validateAccessibility) {
+      throw Error(message
+        + "If you would like to proceed anyway, then set 'validateAccessibility' "
+        + 'to false in your typeScale config.'
+      )
+    } else {
+      console.warn(message
+        + "This is just a warning instead of an error because 'validateAccessibility' "
+        + 'is set to false.'
+      )
+    }
   }
 
   let output = ''
