@@ -17,6 +17,7 @@ export default function grid(state = {}) {
   for (let i = 1; i < steps + 1; i++) {
     output += `.col-${i}${breakpoint} { grid-template-columns:repeat(${i}, minmax(0, 1fr)); }\n`
     output += `.col-span-${i}${breakpoint} { grid-column: span ${i} / span ${i}; }\n`
+    output += `.row-span-${i}${breakpoint} { grid-row: span ${i} / span ${i}; }\n`
     output += `.col-start-${i}${breakpoint} { grid-column-start: ${i}; }\n`
     output += `.row-start-${i}${breakpoint} { grid-row-start: ${i}; }\n`
     output += `.col-end-${i}${breakpoint} { grid-column-end: ${i}; }\n`
