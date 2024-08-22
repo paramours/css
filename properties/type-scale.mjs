@@ -6,7 +6,7 @@ export default function typeScaleProperties(state = {}) {
   const validateAccessibility = typeScale.validateAccessibility ?? true
 
   if (!validateTypeScaleAccessibility(typeScale)) {
-    let message = 'Your requested type scale fails the WCAG SC 1.4.4 accessibility rule.';
+    let message = 'Your requested type scale fails the WCAG SC 1.4.4 accessibility rule. ';
     if (validateAccessibility) {
       throw Error(message
         + "If you would like to proceed anyway, then set 'validateAccessibility' "
