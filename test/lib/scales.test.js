@@ -10,6 +10,7 @@ import {
   generateTypeScaleProperties,
   generateSpaceScaleProperties,
 } from '../../lib/scales.mjs'
+import typeScaleProperties from '../../properties/type-scale.mjs'
 
 test('getRatioValue', t => {
   const num = 1.5
@@ -113,5 +114,50 @@ test('generateSpaceScaleProperties', t => {
 
   t.equal(propertyNames.length, expectedPropertiesLength, 'produces the expected number of custom properties')
   t.ok(isSymmetrical, 'produces a symmetrical set of negative and positive intervals')
+  t.end()
+})
+
+test('validates type scale accessibility', t => {
+  const commonConfig = {
+    viewportMin: 320,
+    viewportMax: 1500,
+  }
+
+  t.throws(() => {
+    typeScaleProperties({
+      config: {
+        typeScale: {
+          ...commonConfig,
+          baseMin: 7,
+          baseMax: 18,
+        }
+      }
+    })
+  });
+
+  // should not throw because `validateAccessibility` is set to false
+  typeScaleProperties({
+    config: {
+      typeScale: {
+        ...commonConfig,
+        validateAccessibility: false,
+        baseMin: 7,
+        baseMax: 18,
+      }
+    }
+  })
+
+  // should not throw because it meets the accessibility requirement
+  typeScaleProperties({
+    config: {
+      typeScale: {
+        ...commonConfig,
+        validateAccessibility: false,
+        baseMin: 8,
+        baseMax: 18,
+      }
+    }
+  })
+
   t.end()
 })

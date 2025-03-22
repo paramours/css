@@ -171,6 +171,7 @@ The configuration file must provide an object as its default export (i.e. `expor
 | `typeScale.baseMax` | The base font size, in pixels, at the maximum viewport width | number | `18` |
 | `typeScale.scaleMin` | The ratio, either as a rational number or a named ratio, to use for font size intervals at the minimum viewport width | number or string | `minor-third` |
 | `typeScale.scaleMax` | The ratio, either as a rational number or a named ratio, to use for font size intervals at the maximum viewport width | number or string | `perfect-fourth` |
+| `typeScale.validateAccessibility` | By default, Paramour will throw an error if your type scale would potentially cause a violation of the [WCAG accessibility rule SC 1.4.4](https://www.w3.org/WAI/WCAG22/Understanding/resize-text), which requires that text can be enlarged to twice its original size when zooming. Set this to false to generate such a type scale anyway (a warning message will still appear for awareness). | boolean | `true` |
 
 For the space and type scales, the following common ratios can be referenced by name for the `scaleMin` and `scaleMax` properties:
 
